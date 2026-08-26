@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Space Shooter — Fullscreen</title>
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            font-family: Inter, system-ui, -apple-system, sans-serif;
+            background: #000;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        canvas {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            z-index: 0;
+        }
+
+        /* Login overlay */
+        #loginOverlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            z-index: 2;
+        }
+
+        .loginBox {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 24px;
+            border-radius: 12px;
+            text-align: center;
+            min-width: 240px;
+        }
+
+        .loginBox h2 {
+            margin: 0 0 12px;
+        }
+
+        .loginBox input {
+            width: 90%;
+            padding: 8px;
+            margin: 6px 0;
+            border-radius: 6px;
+            border: none;
+            outline: none;
+        }
+
+        .loginBox button {
+            margin-top: 12px;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 6px;
+            background: #1a1a1a;
+            color: #9ff;
+            cursor: pointer;
+        }
+
+        /* HUD */
+        .hud {
+            position: absolute;
+            top: 8px;
+            font-size: 20px;
+            font-weight: 600;
+            text-shadow: 0 1px 0 #000;
+            z-index: 1;
+        }
+
+        #scoreHud {
+            left: 8px;
+            color: #aee;
+        }
+
+        #livesHud {
+            right: 8px;
+            color: #f88;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="game"></canvas>
+
+    <div id="loginOverlay">
+        <div class="loginBox">
+            <h2>Enter Your Name</h2>
+            <input id="playerName" type="text" placeholder="Your Name" />
+            <button id="startBtn">Start Game</button>
+        </div>
+    </div>
+
+    <div class="hud" id="scoreHud" style="display:none;">Score: 0</div>
+    <div class="hud" id="livesHud" style="display:none;">❤️❤️❤️❤️❤️</div>
+
+    <script src="game.js"></script>
+</body>
+</html>
