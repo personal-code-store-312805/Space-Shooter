@@ -6,7 +6,7 @@ Hello there! Welcome to our Space Shooter Game!
 This is a fast-paced, top-down arcade game built entirely with HTML5, CSS, and pure vanilla JavaScript. The objective is simple: pilot a starship, survive endless waves of enemy fighters, and rack up the highest score possible before losing the five allotted lives. This project was created to strengthen the understanding of core programming concepts like game loops, state management, and physics without relying on heavy external game engines.
 
 ## 2. Description
-This game was built step-by-step using only native web technologies. Here is a breakdown of how the project comes together under the hood:
+This game was built step-by-step using only native web technologies. The following gives a breakdown of how the project comes together under the hood:
 
 ### Canvas & UI Setup
 The project starts with a very lightweight HTML file containing a `<canvas>` element and a simple login overlay menu. The canvas is styled to cover the entire screen, and a JavaScript event listener constantly watches the window size, seamlessly resizing the game board if the browser window is shrunk or expanded. 
